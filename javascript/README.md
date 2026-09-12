@@ -13,3 +13,7 @@ To run tests:
 - The variables ```perf``` and ```play``` are used but modified,
   so they can be passed as parameters.
 - There is only one variable modified ```thisAmount```, so it can be returned.
+
+## Refactoring 2: Rename Variable (137)
+- Rename ```thisAmount```, in function ```amountFor```, to ```result``` to make it clearer. It makes its role, the return value from a function, always known.
+- Rename the first argument ```perf``` to ```aPerformance```. With a dynamically typed lannguage it is usefull to keep track of types.
