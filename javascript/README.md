@@ -17,3 +17,7 @@ To run tests:
 ## Refactoring 2: Rename Variable (137)
 - Rename ```thisAmount```, in function ```amountFor```, to ```result``` to make it clearer. It makes its role, the return value from a function, always known.
 - Rename the first argument ```perf``` to ```aPerformance```. With a dynamically typed lannguage it is usefull to keep track of types.
+
+## Refactoring 3: Replace Temp with Query (178)
+- Get rid of temporary variables like ```play``` because they create a lot of locally scoped names that complicate extractions.
+- Begin with extracting the right hand side into a function.
