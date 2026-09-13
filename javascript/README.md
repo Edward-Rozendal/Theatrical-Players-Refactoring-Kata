@@ -21,3 +21,8 @@ To run tests:
 ## Refactoring 3: Replace Temp with Query (178)
 - Get rid of temporary variables like ```play``` because they create a lot of locally scoped names that complicate extractions.
 - Begin with extracting the right hand side into a function.
+
+## Refactoring 4: Inline Variable (123)
+- Next is replacing the tempporary variable ```play``` by a function call.
+- The code to look up the play is now executed thrice, but this is unlikely to significantly affect performance.
+Even if it were, it is much easier to improve performance of a well-factored code base.
