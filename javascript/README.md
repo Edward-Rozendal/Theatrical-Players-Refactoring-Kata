@@ -43,3 +43,6 @@ Even if it were, it is much easier to improve performance of a well-factored cod
 - Extract volume credits.
 - As it is an accumulator updated in each pass, the best bet is to initialize a shadow
 of it inside the extracted function and return it.
+
+## Refactoring 9: Rename Variable (137)
+- Rename the variables inside the function to make them clearer and consistent ```amountFor```.
