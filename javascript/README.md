@@ -38,3 +38,8 @@ Even if it were, it is much easier to improve performance of a well-factored cod
 - While done with the arguments of ```amountFor```, look back where it's called.
 - It's being used to set a temporary variable that's not updated again, so inline it.
 - Note: ```playFor``` is now called 6 times in each loop iteration.
+
+## Refactoring 8: Extract Function (106)
+- Extract volume credits.
+- As it is an accumulator updated in each pass, the best bet is to initialize a shadow
+of it inside the extracted function and return it.
