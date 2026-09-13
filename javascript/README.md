@@ -33,3 +33,8 @@ Even if it were, it is much easier to improve performance of a well-factored cod
 
 ## Refactoring 6: Change Function Declaration (124) - step 2
 - Step 2 is deleting the parameter.
+
+## Refactoring 7: Inline Variable (123)
+- While done with the arguments of ```amountFor```, look back where it's called.
+- It's being used to set a temporary variable that's not updated again, so inline it.
+- Note: ```playFor``` is now called 6 times in each loop iteration.
