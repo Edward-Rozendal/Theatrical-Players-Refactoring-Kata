@@ -30,3 +30,6 @@ Even if it were, it is much easier to improve performance of a well-factored cod
 ## Refactoring 5: Change Function Declaration (124) - step 1
 - The ```play``` parameter can be removed from ```amountFor```.
 - Step 1 is using the new function inside ```amountFor```.
+
+## Refactoring 6: Change Function Declaration (124) - step 2
+- Step 2 is deleting the parameter.
