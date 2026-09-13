@@ -26,3 +26,7 @@ To run tests:
 - Next is replacing the tempporary variable ```play``` by a function call.
 - The code to look up the play is now executed thrice, but this is unlikely to significantly affect performance.
 Even if it were, it is much easier to improve performance of a well-factored code base.
+
+## Refactoring 5: Change Function Declaration (124) - step 1
+- The ```play``` parameter can be removed from ```amountFor```.
+- Step 1 is using the new function inside ```amountFor```.
