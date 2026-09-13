@@ -46,3 +46,7 @@ of it inside the extracted function and return it.
 
 ## Refactoring 9: Rename Variable (137)
 - Rename the variables inside the function to make them clearer and consistent ```amountFor```.
+
+## Refactoring 10: Change a function variable to a declared function
+- Although this is a refactoring, it isn't named and included in the catalog as it is not important enough for that.
+- ```format``` is a case of assigning a function to a temp.
