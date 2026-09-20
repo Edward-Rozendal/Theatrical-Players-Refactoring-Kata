@@ -61,3 +61,6 @@ is a common approach.
 - The next target is variable ```volumeCredits```.
 - It's build up during the iteration of the loop.
 - Use split loop to separate the accumulation of ```volumeCredits```.
+
+## Refactoring 13: Slide Statements (223)
+- Move the declaration of ```volumeCredits``` next to the loop.
