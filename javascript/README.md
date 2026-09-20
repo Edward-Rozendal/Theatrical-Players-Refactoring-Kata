@@ -81,3 +81,6 @@ of the variable, give the new function a random name.
 
 ## Refactoring 19: Change Function Declaration (124)
 - Rename the function with a random name to ```totalAmount```.
+
+## Refactoring 20: Rename Variable (137)
+- Rename the variables inside the extracted function to adhere to the used convention.
