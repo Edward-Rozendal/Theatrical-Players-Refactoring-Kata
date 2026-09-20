@@ -75,3 +75,6 @@ is a common approach.
 - Extract total amount.
 - The best name for the function is ```totalAmount```, but as that is already the name
 of the variable, give the new function a random name.
+
+## Refactoring 18: Inline Variable (123)
+- Inline variable ```totalAmount```.
