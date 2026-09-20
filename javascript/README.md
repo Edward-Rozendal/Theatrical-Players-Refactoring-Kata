@@ -67,3 +67,6 @@ is a common approach.
 
 ## Refactoring 14: Extract Function (106)
 - Apply Extract Fuction to the the overall calculation of ```volumeCredits```.
+
+## Refactoring 16: Inline Variable (123)
+- The extracted function ```totalVolumneCredits``` is only being used to set a temporary variable that's not updated again, so inline it.
