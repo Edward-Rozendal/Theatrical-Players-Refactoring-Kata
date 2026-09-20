@@ -70,3 +70,8 @@ is a common approach.
 
 ## Refactoring 16: Inline Variable (123)
 - The extracted function ```totalVolumneCredits``` is only being used to set a temporary variable that's not updated again, so inline it.
+
+## Refactoring 17: Extract Function (106)
+- Extract total amount.
+- The best name for the function is ```totalAmount```, but as that is already the name
+of the variable, give the new function a random name.
