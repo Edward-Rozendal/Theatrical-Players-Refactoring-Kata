@@ -56,3 +56,8 @@ of it inside the extracted function and return it.
 - ```formatAsUSD``` would be a bit too long-winded since it's being used in a string template.
 - Also move the duplication devision by 100 into the function as storing money as integer cents
 is a common approach.
+
+## Refactoring 12: Split Loop (227)
+- The next target is variable ```volumeCredits```.
+- It's build up during the iteration of the loop.
+- Use split loop to separate the accumulation of ```volumeCredits```.
