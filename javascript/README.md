@@ -78,3 +78,6 @@ of the variable, give the new function a random name.
 
 ## Refactoring 18: Inline Variable (123)
 - Inline variable ```totalAmount```.
+
+## Refactoring 19: Change Function Declaration (124)
+- Rename the function with a random name to ```totalAmount```.
