@@ -8,14 +8,18 @@ function statement (invoice, plays) {
         result += ` ${playFor(perf).name}: ${usd(amountFor(perf))} (${perf.audience} seats)\n`;
         totalAmount += amountFor(perf);
     }
-    let volumeCredits = 0;
-    for (let perf of invoice.performances) {
-        volumeCredits += volumeCreditsFor(perf);
-    }
+    let volumeCredits = totalVolumneCredits();
     result += `Amount owed is ${usd(totalAmount)}\n`;
     result += `You earned ${volumeCredits} credits\n`;
     return result;
 
+    function totalVolumneCredits() {
+        let volumeCredits = 0;
+        for (let perf of invoice.performances) {
+            volumeCredits += volumeCreditsFor(perf);
+        }
+        return volumeCredits;
+    }
     function volumeCreditsFor(aPerformance) {
         let result = 0;
         result += Math.max(aPerformance.audience - 30, 0);

@@ -64,3 +64,6 @@ is a common approach.
 
 ## Refactoring 13: Slide Statements (223)
 - Move the declaration of ```volumeCredits``` next to the loop.
+
+## Refactoring 14: Extract Function (106)
+- Apply Extract Fuction to the the overall calculation of ```volumeCredits```.
