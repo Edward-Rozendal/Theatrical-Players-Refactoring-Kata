@@ -101,3 +101,7 @@ that I can understand it and see it in terms of its logical parts.
 - All the calculation code should move into the ```statement``` function so ```rederPlainText```
 operates soley on data passed to it through the ```data``` parameter.
 - The first move is to take the customer and add it to itermediate object.
+
+## Refactoring 24: Add performances to the itermediate object
+- Adding performances to the intermediate object allows deleting the ```invoices```
+parameter to ```renderPlainText```.
