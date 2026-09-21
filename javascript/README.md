@@ -95,3 +95,9 @@ that I can understand it and see it in terms of its logical parts.
 ## Refactoring 22: Add an itermediate data structure
 - Create an object that will act as an intermediate data structure between the two phases.
 - Pass this object in as argument to ```renderText```.
+
+## Refactoring 23: Add customer to the itermediate object
+- Examine the other arguments used by ```renderPlainText```.
+- All the calculation code should move into the ```statement``` function so ```rederPlainText```
+operates soley on data passed to it through the ```data``` parameter.
+- The first move is to take the customer and add it to itermediate object.
