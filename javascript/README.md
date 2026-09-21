@@ -91,3 +91,7 @@ that I can understand it and see it in terms of its logical parts.
 - Now I can begin to focus more on the functionality change: providing an HTML version.
 - I want the same calculation functions to be used by the text and HTML version of the statement.
 - Start a Split Phase (154) by applying Extract Function to the code that makes up the second phase.
+
+## Refactoring 22: Add an itermediate data structure
+- Create an object that will act as an intermediate data structure between the two phases.
+- Pass this object in as argument to ```renderText```.
