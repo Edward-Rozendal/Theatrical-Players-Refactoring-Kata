@@ -105,3 +105,9 @@ operates soley on data passed to it through the ```data``` parameter.
 ## Refactoring 24: Add performances to the itermediate object
 - Adding performances to the intermediate object allows deleting the ```invoices```
 parameter to ```renderPlainText```.
+
+## Refactoring 25: Enrich performance with data from the play
+- I like the play name to come from the intermediate data.
+- Making a copy of the performance object is the first step.
+- I take a shallow copy because I don't want to modify the data passed to the function.
+
