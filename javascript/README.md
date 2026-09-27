@@ -111,3 +111,7 @@ parameter to ```renderPlainText```.
 - Making a copy of the performance object is the first step.
 - I take a shallow copy because I don't want to modify the data passed to the function.
 
+## Refactoring 26: Enrich performance with playFor.
+- Now I have a spot for the play, I needd to add it.
+- I need to apply Move Function (198) to ```playFor``` and ```statement```.
+- As ```playFor``` is still used by ```renderPlainText```, the first step is using a copy.
