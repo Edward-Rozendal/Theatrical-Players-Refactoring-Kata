@@ -123,3 +123,8 @@ parameter to ```renderPlainText```.
 - Move ```amountFor``` to ```statement```.
 - Add ```amountFor``` in ```enrichtPerformance```.
 - Replace all the references to ```amountFor``` in ```renderPlainText``` to use the data instead.
+
+## Refactoring 29: Enrich performance with volumeCreditsFor.
+- Move ```volumeCreditsFor``` to ```statement```.
+- Add ```volumeCreditsFor``` in ```enrichtPerformance```.
+- Replace all the references to ```volumeCreditsFor``` in ```renderPlainText``` to use the data instead.
