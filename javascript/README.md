@@ -118,3 +118,8 @@ parameter to ```renderPlainText```.
 
 ## Refactoring 27: Use play from data
 - Replace all the references to ```playFor``` in ```renderPlainText``` to use the data instead.
+
+## Refactoring 28: Enrich performance with amountFor.
+- Move ```amountFor``` to ```statement```.
+- Add ```amountFor``` in ```enrichtPerformance```.
+- Replace all the references to ```amountFor``` in ```renderPlainText``` to use the data instead.
