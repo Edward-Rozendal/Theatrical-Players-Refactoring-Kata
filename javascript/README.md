@@ -115,3 +115,6 @@ parameter to ```renderPlainText```.
 - Now I have a spot for the play, I needd to add it.
 - I need to apply Move Function (198) to ```playFor``` and ```statement```.
 - As ```playFor``` is still used by ```renderPlainText```, the first step is using a copy.
+
+## Refactoring 27: Use play from data
+- Replace all the references to ```playFor``` in ```renderPlainText``` to use the data instead.
