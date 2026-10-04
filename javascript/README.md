@@ -138,3 +138,7 @@ parameter to ```renderPlainText```.
 
 ## Refactoring 32: Extract all first-phase code into its own function.
 - Extract function ```createStatementData```.
+
+## Refactoring 33: Move all first-phase code to its own file.
+- Move ```createStatementData``` to file ```createStatementData.js```.
+- Rename ```statementData``` to ```result``` to match personal convention.
