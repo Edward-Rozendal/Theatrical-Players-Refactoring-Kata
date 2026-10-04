@@ -132,3 +132,6 @@ parameter to ```renderPlainText```.
 ## Refactoring 30: Move the two calculations of the total.
 - Move ```totalAmount``` and ```totalVolumneCredits``` to ```statement```.
 - Pass the statement data as explict parameter.
+
+## Refactoring 31: Replace Loop with Pipeline (231).
+- Replace ```data.performances``` loops in ```totalAmount``` and ```totalVolumneCredits```.
