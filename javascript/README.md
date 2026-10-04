@@ -8,6 +8,14 @@ To run tests:
     npm install
     npm test
 
+The tests use the ```Jest``` testing framework with the *approval testing* approach:
+
+```expect(statement(invoice, plays)).toMatchSnapshot();```
+
+It means Jest is taking the output of ```statement(invoice, plays)``` , saving it as a snapshot (in ```__snapshots__/statement.test.js.snap```),
+and comparing it against the previously saved snapshot. If the output changes, the test fails.
+
+
 ## Refactoring 1: Extract Function (106)
 - Extract the switch statement in the middle.
 - The variables ```perf``` and ```play``` are used but modified,
@@ -142,3 +150,8 @@ parameter to ```renderPlainText```.
 ## Refactoring 33: Move all first-phase code to its own file.
 - Move ```createStatementData``` to file ```createStatementData.js```.
 - Rename ```statementData``` to ```result``` to match personal convention.
+
+## Add HTLM version of statement
+- Add function ```htmlStatement```.
+- Move function ```usd``` up so that ```renderHtml``` can use it.
+- Add a test for ```htmlStatement```.
