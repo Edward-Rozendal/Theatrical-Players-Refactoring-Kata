@@ -128,3 +128,7 @@ parameter to ```renderPlainText```.
 - Move ```volumeCreditsFor``` to ```statement```.
 - Add ```volumeCreditsFor``` in ```enrichtPerformance```.
 - Replace all the references to ```volumeCreditsFor``` in ```renderPlainText``` to use the data instead.
+
+## Refactoring 30: Move the two calculations of the total.
+- Move ```totalAmount``` and ```totalVolumneCredits``` to ```statement```.
+- Pass the statement data as explict parameter.
