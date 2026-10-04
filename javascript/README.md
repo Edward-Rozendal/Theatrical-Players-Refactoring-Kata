@@ -135,3 +135,6 @@ parameter to ```renderPlainText```.
 
 ## Refactoring 31: Replace Loop with Pipeline (231).
 - Replace ```data.performances``` loops in ```totalAmount``` and ```totalVolumneCredits```.
+
+## Refactoring 32: Extract all first-phase code into its own function.
+- Extract function ```createStatementData```.
