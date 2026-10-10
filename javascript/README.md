@@ -91,3 +91,7 @@ the test fails.
 
 ## 15: Move the declaration of volumeCredits next to the loop.
 - Slide Statements (223)
+
+## 16: Extract function totalVolumneCredits
+- Extract Function (106)
+- Extract the total volume credits calculation.
