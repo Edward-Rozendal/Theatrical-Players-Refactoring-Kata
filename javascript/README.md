@@ -85,3 +85,6 @@ the test fails.
   string template.
 - Also move the duplication devision by 100 into the function as storing money
   as integer cents is a common approach.
+
+## 14: Separate the accumulation of volumeCredits in function statement
+- Split Loop (227)
