@@ -101,3 +101,6 @@ the test fails.
 
 ## 18: Separate the accumulation of totalAmount in function statement
 - Split Loop (227)
+
+## 19: Move the declaration of totalAmount next to the loop
+- Slide Statements (223)
