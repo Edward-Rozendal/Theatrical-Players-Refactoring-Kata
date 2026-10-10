@@ -113,3 +113,6 @@ the test fails.
 
 ## 21: Replace temporary variable totalAmount by a call to function to calculate total amount
 - Inline Variable (123)
+
+## 22: Rename function to calculate total amount to totalAmount
+- Change Function Declaration (124)
