@@ -126,3 +126,15 @@ the test fails.
 - Rename Variable (137)
 - This is a personal convention to make it clearer. It makes its role, the
   return value from a function, always known.
+
+## 25: Extract function renderPlainText
+- Extract Function (106)
+- So far the refactoring has focussed on adding enough structure to the
+  functions so that I can understand it and see it in terms of its logical
+  parts.
+- Now I can begin to focus more on the functionality change: providing an
+  HTML version.
+- I want the same calculation functions to be used by the text and HTML
+  version of the statement.
+- Start a Split Phase (154) by applying Extract Function (106) to the code
+  that makes up the second phase.
