@@ -55,3 +55,12 @@ the test fails.
 
 ## 8: Replace temporary variable thisAmount by a call to function amountFor
 - Inline Variable (123)
+
+## 9: Extract function volumeCreditsFor
+- Extract Function (106)
+- Extract the volume credits calculation of a performance.
+- The variable ```perf``` is used but not modified, so it can be passed as
+  a parameter.
+- ```volumeCredits``` is a bit more tricky as it is an accumulator updated
+  in each pass. The best bet is to initialize a shadow of it inside the
+  extracted function and return it.
