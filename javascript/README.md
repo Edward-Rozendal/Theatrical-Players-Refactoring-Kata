@@ -95,3 +95,6 @@ the test fails.
 ## 16: Extract function totalVolumneCredits
 - Extract Function (106)
 - Extract the total volume credits calculation.
+
+## 17: Replace temporary variable volumeCredits by a call to function totalVolumneCredits
+- Inline Variable (123)
