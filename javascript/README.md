@@ -104,3 +104,9 @@ the test fails.
 
 ## 19: Move the declaration of totalAmount next to the loop
 - Slide Statements (223)
+
+## 20: Extract function to calculate total amount
+- Extract Function (106)
+- Extract the total amount calculation.
+- The best name for the function is ```totalAmount```, but as that is already
+  the name of the variable, give the new function a random name.
