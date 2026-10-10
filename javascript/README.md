@@ -34,3 +34,8 @@ the test fails.
 ## 3: Rename parameter perf, of function amountFor, to aPerformance
 - Rename Variable (137)
 - With a dynamically typed language it is usefull to keep track of types.
+
+## 4: Extract right-hand side of assignment to variable play into function playFor
+- Replace Temp with Query (178)
+- Get rid of temporary variables like ```play``` because they create a lot
+  of locally scoped names that complicate extractions.
