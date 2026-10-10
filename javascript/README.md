@@ -39,3 +39,9 @@ the test fails.
 - Replace Temp with Query (178)
 - Get rid of temporary variables like ```play``` because they create a lot
   of locally scoped names that complicate extractions.
+
+## 5: Replace temporary variable play by a call to function playFor
+- Inline Variable (123)
+- The code to look up the play is now executed thrice, but this is unlikely to
+  significantly affect performance. Even if it were, it is much easier to
+  improve performance of a well-factored code base.
