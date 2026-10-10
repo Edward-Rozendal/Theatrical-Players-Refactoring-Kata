@@ -110,3 +110,6 @@ the test fails.
 - Extract the total amount calculation.
 - The best name for the function is ```totalAmount```, but as that is already
   the name of the variable, give the new function a random name.
+
+## 21: Replace temporary variable totalAmount by a call to function to calculate total amount
+- Inline Variable (123)
