@@ -88,3 +88,6 @@ the test fails.
 
 ## 14: Separate the accumulation of volumeCredits in function statement
 - Split Loop (227)
+
+## 15: Move the declaration of volumeCredits next to the loop.
+- Slide Statements (223)
