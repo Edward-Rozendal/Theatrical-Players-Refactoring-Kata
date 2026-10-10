@@ -73,3 +73,7 @@ the test fails.
 ## 11: Rename parameter perf, of function volumeCreditsFor, to aPerformance
 - Rename Variable (137)
 - With a dynamically typed language it is usefull to keep track of types.
+
+## 12: Replace function variable format with a declared function
+- Although this is a refactoring, it isn't named and included in the catalog
+  as it is not important enough for that.
