@@ -64,3 +64,8 @@ the test fails.
 - ```volumeCredits``` is a bit more tricky as it is an accumulator updated
   in each pass. The best bet is to initialize a shadow of it inside the
   extracted function and return it.
+
+## 10: Rename variable volumeCredits, in function volumeCreditsFor, to result
+- Rename Variable (137)
+- This is a personal convention to make it clearer. It makes its role, the
+  return value from a function, always known.
