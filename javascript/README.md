@@ -77,3 +77,11 @@ the test fails.
 ## 12: Replace function variable format with a declared function
 - Although this is a refactoring, it isn't named and included in the catalog
   as it is not important enough for that.
+
+## 13: Rename function format to usd
+- Change Function Declaration (124)
+- The name ```format``` doesn't really convey enough of what it's doing.
+- ```formatAsUSD``` would be a bit too long-winded since it's being used in a
+  string template.
+- Also move the duplication devision by 100 into the function as storing money
+  as integer cents is a common approach.
