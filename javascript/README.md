@@ -98,3 +98,6 @@ the test fails.
 
 ## 17: Replace temporary variable volumeCredits by a call to function totalVolumneCredits
 - Inline Variable (123)
+
+## 18: Separate the accumulation of totalAmount in function statement
+- Split Loop (227)
