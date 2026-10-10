@@ -121,3 +121,8 @@ the test fails.
 - Rename Variable (137)
 - This is a personal convention to make it clearer. It makes its role, the
   return value from a function, always known.
+
+## 24: Rename variable volumeCredits, in function totalVolumneCredits, to result
+- Rename Variable (137)
+- This is a personal convention to make it clearer. It makes its role, the
+  return value from a function, always known.

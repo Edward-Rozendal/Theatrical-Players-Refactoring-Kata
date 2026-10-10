@@ -8,7 +8,7 @@ function statement (invoice, plays) {
     result += `You earned ${totalVolumneCredits()} credits\n`;
     return result;
 
-    function totalAmount() {
+     function totalAmount() {
         let result = 0;
         for (let perf of invoice.performances) {
             result += amountFor(perf);
@@ -17,11 +17,11 @@ function statement (invoice, plays) {
     }
 
     function totalVolumneCredits() {
-        let volumeCredits = 0;
+        let result = 0;
         for (let perf of invoice.performances) {
-            volumeCredits += volumeCreditsFor(perf);
+            result += volumeCreditsFor(perf);
         }
-        return volumeCredits;
+        return result;
     }
 
     function usd(aNumber) {
