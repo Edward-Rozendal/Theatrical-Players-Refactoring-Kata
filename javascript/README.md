@@ -30,3 +30,7 @@ the test fails.
 - Rename Variable (137)
 - This is a personal convention to make it clearer. It makes its role, the
   return value from a function, always known.
+
+## 3: Rename parameter perf, of function amountFor, to aPerformance
+- Rename Variable (137)
+- With a dynamically typed language it is usefull to keep track of types.
