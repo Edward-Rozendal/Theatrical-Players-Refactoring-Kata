@@ -49,3 +49,6 @@ the test fails.
 ## 6: Use function playFor inside function amountFor instead of parameter play
 - Replace Temp with Query (178)
 - By using function ```playFor```, parameter ```play``` is no longer needed.
+
+## 7: Delete parameter play from function amountFor
+- Change Function Declaration (124)
