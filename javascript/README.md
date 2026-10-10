@@ -45,3 +45,7 @@ the test fails.
 - The code to look up the play is now executed thrice, but this is unlikely to
   significantly affect performance. Even if it were, it is much easier to
   improve performance of a well-factored code base.
+
+## 6: Use function playFor inside function amountFor instead of parameter play
+- Replace Temp with Query (178)
+- By using function ```playFor```, parameter ```play``` is no longer needed.
