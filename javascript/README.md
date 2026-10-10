@@ -52,3 +52,6 @@ the test fails.
 
 ## 7: Delete parameter play from function amountFor
 - Change Function Declaration (124)
+
+## 8: Replace temporary variable thisAmount by a call to function amountFor
+- Inline Variable (123)
