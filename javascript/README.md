@@ -172,3 +172,10 @@ the test fails.
 - The second step in Move Function (198) to move ```playFor``` to
   ```statement``` is replacing all the references to ```playFor``` in
   ```renderPlainText``` to use the data instead.
+
+## 32: Enrich performance with amountFor
+- Move Function (198)
+- Move ```amountFor``` to ```statement```.
+- Add ```amountFor``` in ```enrichPerformance```.
+- Replace all the references to ```amountFor``` in ```renderPlainText``` to
+  use the data instead.
