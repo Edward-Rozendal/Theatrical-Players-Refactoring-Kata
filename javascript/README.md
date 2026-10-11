@@ -143,3 +143,11 @@ the test fails.
 - Create an object that will act as an intermediate data structure between
   the two phases.
 - Pass this object in as argument to ```renderText```.
+
+## 27: Add customer to statementData
+- I want to move the data that comes from the other arguments used by
+  ```renderPlainText``` into the intermediate data structure
+- All the calculation code should move into the ```statement``` function so
+  ```rederPlainText``` operates soley on data passed to it through the
+  ```data``` parameter.
+- The first move is to take the customer and add it to itermediate object.
