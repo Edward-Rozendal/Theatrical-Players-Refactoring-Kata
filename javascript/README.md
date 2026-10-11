@@ -179,3 +179,10 @@ the test fails.
 - Add ```amountFor``` in ```enrichPerformance```.
 - Replace all the references to ```amountFor``` in ```renderPlainText``` to
   use the data instead.
+
+## 33: Enrich performance with volumeCreditsFor
+- Move Function (198)
+- Move ```volumeCreditsFor``` to ```statement```.
+- Add ```volumeCreditsFor``` in ```enrichPerformance```.
+- Replace all the references to ```volumeCreditsFor``` in ```renderPlainText```
+  to use the data instead.
