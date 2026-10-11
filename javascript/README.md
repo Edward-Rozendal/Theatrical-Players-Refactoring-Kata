@@ -196,3 +196,6 @@ the test fails.
 - Replace Loop with Pipeline (231)
 - Replace ```data.performances``` loops in ```totalAmount``` and
   ```totalVolumneCredits``` by ```reduce``` pipeline operation.
+
+## 36: Extract all first-phase code into its own function
+- Extract function ```createStatementData```.
