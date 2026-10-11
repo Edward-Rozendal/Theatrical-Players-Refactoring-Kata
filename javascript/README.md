@@ -151,3 +151,7 @@ the test fails.
   ```rederPlainText``` operates soley on data passed to it through the
   ```data``` parameter.
 - The first move is to take the customer and add it to itermediate object.
+
+## 28: Add performances to statementData
+- Adding performances to the intermediate object allows deleting the
+  ```invoices``` parameter to ```renderPlainText```.
