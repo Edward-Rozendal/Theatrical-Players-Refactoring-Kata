@@ -199,3 +199,7 @@ the test fails.
 
 ## 36: Extract all first-phase code into its own function
 - Extract function ```createStatementData```.
+
+## 37: Move all first-phase code to its own file
+- Move ```createStatementData``` to file ```createStatementData.js```.
+- Rename ```statementData``` to ```result``` to match personal convention.
