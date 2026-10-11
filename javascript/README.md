@@ -167,3 +167,8 @@ the test fails.
 - I want to apply Move Function (198) to move ```playFor``` from
   ```renderPlainText``` to ```statement```, but as ```playFor``` is still used
   by ```renderPlainText```, the first step is using a copy.
+
+## 31: Use play from statementData
+- The second step in Move Function (198) to move ```playFor``` to
+  ```statement``` is replacing all the references to ```playFor``` in
+  ```renderPlainText``` to use the data instead.
