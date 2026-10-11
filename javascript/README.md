@@ -191,3 +191,8 @@ the test fails.
 - Move Function (198)
 - Move ```totalAmount``` and ```totalVolumneCredits``` to ```statement```.
 - Pass the statement data as explicit parameter.
+
+## 35: Replace data.performances loops by pipeline operation
+- Replace Loop with Pipeline (231)
+- Replace ```data.performances``` loops in ```totalAmount``` and
+  ```totalVolumneCredits``` by ```reduce``` pipeline operation.
