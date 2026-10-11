@@ -186,3 +186,8 @@ the test fails.
 - Add ```volumeCreditsFor``` in ```enrichPerformance```.
 - Replace all the references to ```volumeCreditsFor``` in ```renderPlainText```
   to use the data instead.
+
+## 34: Move the two calculations of the total to function statement
+- Move Function (198)
+- Move ```totalAmount``` and ```totalVolumneCredits``` to ```statement```.
+- Pass the statement data as explicit parameter.
