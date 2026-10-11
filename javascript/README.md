@@ -161,3 +161,9 @@ the test fails.
 - Making a copy of the performance object is the first step.
 - I take a shallow copy because I don't want to modify the data passed to the
   function.
+
+## 30: Enrich performance with playFor
+- Now I have a spot for the play, I needd to add it.
+- I want to apply Move Function (198) to move ```playFor``` from
+  ```renderPlainText``` to ```statement```, but as ```playFor``` is still used
+  by ```renderPlainText```, the first step is using a copy.
