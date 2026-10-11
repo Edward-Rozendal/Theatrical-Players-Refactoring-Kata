@@ -203,3 +203,8 @@ the test fails.
 ## 37: Move all first-phase code to its own file
 - Move ```createStatementData``` to file ```createStatementData.js```.
 - Rename ```statementData``` to ```result``` to match personal convention.
+
+## 38: Add HTLM version of statement
+- Add function ```htmlStatement```.
+- Move function ```usd``` up so that ```renderHtml``` can use it.
+- Add a test for ```htmlStatement```.
