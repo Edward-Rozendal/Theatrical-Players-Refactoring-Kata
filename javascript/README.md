@@ -208,3 +208,19 @@ the test fails.
 - Add function ```htmlStatement```.
 - Move function ```usd``` up so that ```renderHtml``` can use it.
 - Add a test for ```htmlStatement```.
+
+# Reorganizing the Calculations by Type
+- The next feature is supporting more categories of plays, each with its
+  own charging and volume credit calculations.
+- The natural approach is type polymorphism.
+- The overall plan is to set up an inheritance hierarchy with ```comedy``` and
+  ```tragedy``` subclasses that contain the calculation logic for those cases.
+- A similar structure will be made for the volume credits calculation.
+
+## 39: Create a performance calculator
+- The ```enrichPerformance``` function is the key since it populates the
+  intermediate data structure with the data for each performance.
+- Currently, it calls the conditional functions for amount and volume
+  credit. Those functions should be called on a host class.
+- As the class hosts functions for calculating data about performances
+  it is named ```PeformanceCalculator```.
