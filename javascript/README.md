@@ -224,3 +224,9 @@ the test fails.
   credit. Those functions should be called on a host class.
 - As the class hosts functions for calculating data about performances
   it is named ```PeformanceCalculator```.
+
+## 40: Pass the performance play into the performance calculator
+- Change Function Declaration (124)
+- Moving the play record into the performance calculator is not needed, as
+  it's not varying polymorphically, but by keeping all data transforms in
+  one place, the code will be cleaner.
