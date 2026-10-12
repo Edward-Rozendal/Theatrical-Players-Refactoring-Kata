@@ -230,3 +230,8 @@ the test fails.
 - Moving the play record into the performance calculator is not needed, as
   it's not varying polymorphically, but by keeping all data transforms in
   one place, the code will be cleaner.
+
+## 41: Copy calculating the amount for a performance to the performance calculator
+- First part of: Move Function (198)
+- Can run Babel to catch any syntax errors in the new function - but little
+  more than that.
