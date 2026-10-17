@@ -247,3 +247,7 @@ the test fails.
 - First part of: Move Function (198)
 - Can run Babel to catch any syntax errors in the new function - but little
   more than that.
+
+## 45: Make volumeCredits a delegating function to the performance calculator
+- Take the original function ```volumeCredits``` and turn in into a delegating
+  function so it calls the new function.

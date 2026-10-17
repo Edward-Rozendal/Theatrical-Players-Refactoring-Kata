@@ -20,11 +20,7 @@ function createStatementData(invoice, plays) {
     }
 
     function volumeCreditsFor(aPerformance) {
-        let result = 0;
-        result += Math.max(aPerformance.audience - 30, 0);
-        // add extra credit for every ten comedy attendees
-        if ("comedy" === aPerformance.play.type) result += Math.floor(aPerformance.audience / 5);
-        return result;
+        return new PeformanceCalculator(aPerformance, playFor(aPerformance)).volumeCredits;
     }
     
     function totalAmount(data) {
