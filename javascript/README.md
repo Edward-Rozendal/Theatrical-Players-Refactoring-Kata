@@ -242,3 +242,8 @@ the test fails.
 
 ## 43: Replace calling amountFor by getting the amount from the performance calculator
 - Inline Function (115)
+
+## 44: Copy calculating the volume credits for a performance to the performance calculator
+- First part of: Move Function (198)
+- Can run Babel to catch any syntax errors in the new function - but little
+  more than that.
