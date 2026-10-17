@@ -251,3 +251,6 @@ the test fails.
 ## 45: Make volumeCredits a delegating function to the performance calculator
 - Take the original function ```volumeCredits``` and turn in into a delegating
   function so it calls the new function.
+
+## 46: Replace calling volumeCredits by getting the volume credits from the performance calculator
+- Inline Function (115)
