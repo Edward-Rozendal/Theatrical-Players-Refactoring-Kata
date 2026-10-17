@@ -239,3 +239,6 @@ the test fails.
 ## 42: Make amountFor a delegating function to the performance calculator
 - Take the original function ```amountFor``` and turn in into a delegating
   function so it calls the new function.
+
+## 43: Replace calling amountFor by getting the amount from the performance calculator
+- Inline Function (115)
