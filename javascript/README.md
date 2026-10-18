@@ -257,3 +257,7 @@ the test fails.
 
 ## 47: Replace PeformanceCalculator constructor call with function createPerformanceCalculator
 - Replace Constructor with Factory Function (334)
+
+## 48: Create subclasses of the performance calculator
+- Create subclasses TragedyCalculator and ComedyCalculator.
+- Get the creation function to select which one to return.

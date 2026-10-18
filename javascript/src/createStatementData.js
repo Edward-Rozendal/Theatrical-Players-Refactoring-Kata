@@ -29,7 +29,14 @@ function createStatementData(invoice, plays) {
 }
 
 function createPerformanceCalculator(aPerformance, aPlay) {
-    return new PeformanceCalculator(aPerformance, aPlay);
+    switch (aPlay.type) {
+        case "tragedy":
+            return new TragedyCalculator(aPerformance, aPlay);
+        case "comedy":
+            return new ComedyCalculator(aPerformance, aPlay);
+        default:
+            throw new Error(`unknown type: ${aPlay.type}`);
+    }
 }
 
 class PeformanceCalculator {
@@ -66,6 +73,12 @@ class PeformanceCalculator {
         if ("comedy" === this.play.type) result += Math.floor(this.performance.audience / 5);
         return result;
     }
+}
+
+class TragedyCalculator extends PeformanceCalculator {
+}
+
+class ComedyCalculator extends PeformanceCalculator {
 }
 
 module.exports = createStatementData;
