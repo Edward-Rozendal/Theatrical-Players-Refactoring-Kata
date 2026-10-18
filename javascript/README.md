@@ -264,3 +264,6 @@ the test fails.
 
 ## 49: Override the calculation of the amount for tragedies in TragedyCalculator
 - Replace Conditional with Polymorphism (272)
+
+## 50: Override the calculation of the amount for comedies in ComedyCalculator
+- Replace Conditional with Polymorphism (272)
