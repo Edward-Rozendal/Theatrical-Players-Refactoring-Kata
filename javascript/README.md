@@ -271,3 +271,9 @@ the test fails.
 ## 51: Cleanup calculation of the amount for tragedies in the superclass
 - The method ```amount``` in ```PeformanceCalculator``` can now be removed, as
   it should never be called. But it's kinder to leave a tombstone.
+
+## 52: Override the calculation of the volume credits for comedies in ComedyCalculator
+- Replace Conditional with Polymorphism (272)
+- Most plays expect to check for audience is above 30, with only some
+  categores introducing a variation. So it makes sense to leave the more
+  common case on the superclass as a default.
