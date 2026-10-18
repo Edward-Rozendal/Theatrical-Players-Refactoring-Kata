@@ -261,3 +261,6 @@ the test fails.
 ## 48: Create subclasses of the performance calculator
 - Create subclasses TragedyCalculator and ComedyCalculator.
 - Get the creation function to select which one to return.
+
+## 49: Override the calculation of the amount for tragedies in TragedyCalculator
+- Replace Conditional with Polymorphism (272)
