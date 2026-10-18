@@ -254,3 +254,6 @@ the test fails.
 
 ## 46: Replace calling volumeCredits by getting the volume credits from the performance calculator
 - Inline Function (115)
+
+## 47: Replace PeformanceCalculator constructor call with function createPerformanceCalculator
+- Replace Constructor with Factory Function (334)
