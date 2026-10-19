@@ -29,3 +29,14 @@ Run test:
 ```
 $ ctest --test-dir build/debug
 ```
+
+# Stage 1 - Decomposing the original function
+- The focus is adding enough structure so it easier to understand and to see
+  it in terms of its logical parts.
+
+## 1: Extract function amountFor
+- Extract Function (106)
+- Extract the if statements in the middle to function ```amountFor```.
+- The variables ```perf``` and ```play``` are used but not modified, so they
+  can be passed as parameters.
+- There is only one variable modified ```this_amount```, so it can be returned.

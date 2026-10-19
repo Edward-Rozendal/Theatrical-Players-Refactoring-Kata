@@ -4,6 +4,11 @@
 #include <sstream>
 #include <iomanip>
 
+float amountFor(
+    const nlohmann::json& play,
+    const nlohmann::json& perf);
+
+
 // https://stackoverflow.com/a/7277333/104370
 class comma_numpunct : public std::numpunct<char>
 {
@@ -39,32 +44,8 @@ std::string statement(
 
     for( const nlohmann::json& perf : invoice["performances"])
     {
-        float this_amount = 0;
         const nlohmann::json& play = plays[perf["playID"].get<std::string>()];
-        if (play["type"] == "tragedy")
-        {
-            this_amount = 40000;
-            if (perf["audience"] > 30)
-            {
-                this_amount += 1000 * (perf["audience"].get<int>() - 30);
-            }
-        }
-
-        else if (play["type"] == "comedy")
-        {
-            this_amount = 30000;
-            if (perf["audience"] > 20)
-            {
-                this_amount += 10000 + 500 * (perf["audience"].get<int>() - 20);
-            }
-
-            this_amount += 300 * perf["audience"].get<int>();
-        }
-
-        else
-        {
-            throw std::domain_error("unknown type: " + play["type"].get<std::string>());
-        }
+        float this_amount = amountFor(play, perf);
 
         // add volume credits
         volume_credits += std::max(perf["audience"].get<int>() - 30, 0);
@@ -84,4 +65,36 @@ std::string statement(
     result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
     result << "You earned " << volume_credits << " credits";
     return result.str();
+}
+
+float amountFor(
+    const nlohmann::json& play,
+    const nlohmann::json& perf)
+{
+    float this_amount = 0;
+    if (play["type"] == "tragedy")
+    {
+        this_amount = 40000;
+        if (perf["audience"] > 30)
+        {
+            this_amount += 1000 * (perf["audience"].get<int>() - 30);
+        }
+    }
+
+    else if (play["type"] == "comedy")
+    {
+        this_amount = 30000;
+        if (perf["audience"] > 20)
+        {
+            this_amount += 10000 + 500 * (perf["audience"].get<int>() - 20);
+        }
+
+        this_amount += 300 * perf["audience"].get<int>();
+    }
+
+    else
+    {
+        throw std::domain_error("unknown type: " + play["type"].get<std::string>());
+    }
+    return this_amount;
 }
