@@ -71,30 +71,30 @@ float amountFor(
     const nlohmann::json& play,
     const nlohmann::json& perf)
 {
-    float this_amount = 0;
+    float result = 0;
     if (play["type"] == "tragedy")
     {
-        this_amount = 40000;
+        result = 40000;
         if (perf["audience"] > 30)
         {
-            this_amount += 1000 * (perf["audience"].get<int>() - 30);
+            result += 1000 * (perf["audience"].get<int>() - 30);
         }
     }
 
     else if (play["type"] == "comedy")
     {
-        this_amount = 30000;
+        result = 30000;
         if (perf["audience"] > 20)
         {
-            this_amount += 10000 + 500 * (perf["audience"].get<int>() - 20);
+            result += 10000 + 500 * (perf["audience"].get<int>() - 20);
         }
 
-        this_amount += 300 * perf["audience"].get<int>();
+        result += 300 * perf["audience"].get<int>();
     }
 
     else
     {
         throw std::domain_error("unknown type: " + play["type"].get<std::string>());
     }
-    return this_amount;
+    return result;
 }

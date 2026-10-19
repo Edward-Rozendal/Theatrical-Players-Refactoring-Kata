@@ -40,3 +40,8 @@ $ ctest --test-dir build/debug
 - The variables ```perf``` and ```play``` are used but not modified, so they
   can be passed as parameters.
 - There is only one variable modified ```this_amount```, so it can be returned.
+
+## 2: Rename variable this_amount, in function amountFor, to result
+- Rename Variable (137)
+- This is a personal convention to make it clearer. It makes its role, the
+  return value from a function, always known.
