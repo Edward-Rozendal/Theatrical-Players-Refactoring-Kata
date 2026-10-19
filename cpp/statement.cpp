@@ -69,27 +69,27 @@ std::string statement(
 
 float amountFor(
     const nlohmann::json& play,
-    const nlohmann::json& perf)
+    const nlohmann::json& performance)
 {
     float result = 0;
     if (play["type"] == "tragedy")
     {
         result = 40000;
-        if (perf["audience"] > 30)
+        if (performance["audience"] > 30)
         {
-            result += 1000 * (perf["audience"].get<int>() - 30);
+            result += 1000 * (performance["audience"].get<int>() - 30);
         }
     }
 
     else if (play["type"] == "comedy")
     {
         result = 30000;
-        if (perf["audience"] > 20)
+        if (performance["audience"] > 20)
         {
-            result += 10000 + 500 * (perf["audience"].get<int>() - 20);
+            result += 10000 + 500 * (performance["audience"].get<int>() - 20);
         }
 
-        result += 300 * perf["audience"].get<int>();
+        result += 300 * performance["audience"].get<int>();
     }
 
     else
