@@ -4,6 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
+nlohmann::json playFor(
+    const nlohmann::json& plays,
+    const nlohmann::json& performance);
+    
 float amountFor(
     const nlohmann::json& play,
     const nlohmann::json& perf);
@@ -44,7 +48,7 @@ std::string statement(
 
     for( const nlohmann::json& perf : invoice["performances"])
     {
-        const nlohmann::json& play = plays[perf["playID"].get<std::string>()];
+        const nlohmann::json& play = playFor(plays, perf);
         float this_amount = amountFor(play, perf);
 
         // add volume credits
@@ -65,6 +69,13 @@ std::string statement(
     result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
     result << "You earned " << volume_credits << " credits";
     return result.str();
+}
+
+nlohmann::json playFor(
+    const nlohmann::json& plays,
+    const nlohmann::json& performance)
+{
+    return plays[performance["playID"].get<std::string>()];
 }
 
 float amountFor(
