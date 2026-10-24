@@ -82,3 +82,7 @@ $ ctest --test-dir build/debug
 
 ## 10: Move the declaration of volume_credits next to the loop
 - Slide Statements (223)
+
+## 11: Extract function totalVolumeCredits
+- Extract Function (106)
+- Extract the total volume credits calculation.

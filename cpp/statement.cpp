@@ -4,6 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
+int totalVolumeCredits(
+    const nlohmann::json& invoice,
+    const nlohmann::json& plays);
+
 int volumeCreditsFor(
     const nlohmann::json& play,
     const nlohmann::json& performance);
@@ -57,15 +61,23 @@ std::string statement(
             " (" << perf["audience"] << " seats)\n";
         total_amount += this_amount;
     }
+    int volume_credits = totalVolumeCredits(invoice, plays);
+
+    result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
+    result << "You earned " << volume_credits << " credits";
+    return result.str();
+}
+
+int totalVolumeCredits(
+    const nlohmann::json& invoice,
+    const nlohmann::json& plays)
+{
     int volume_credits = 0;
     for( const nlohmann::json& perf : invoice["performances"])
     {
         volume_credits += volumeCreditsFor(playFor(plays, perf), perf);
     }
-
-    result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
-    result << "You earned " << volume_credits << " credits";
-    return result.str();
+    return volume_credits;
 }
 
 int volumeCreditsFor(
