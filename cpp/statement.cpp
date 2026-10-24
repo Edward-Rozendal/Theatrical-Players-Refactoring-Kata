@@ -4,6 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
+int volumeCreditsFor(
+    const nlohmann::json& play,
+    const nlohmann::json& perf);
+
 nlohmann::json playFor(
     const nlohmann::json& plays,
     const nlohmann::json& performance);
@@ -51,13 +55,7 @@ std::string statement(
         float this_amount = amountFor(playFor(plays, perf), perf);
 
         // add volume credits
-        volume_credits += std::max(perf["audience"].get<int>() - 30, 0);
-
-        // add extra credit for every ten comedy attendees
-        if ("comedy" == playFor(plays, perf)["type"])
-        {
-            volume_credits += perf["audience"].get<int>() / 5;
-        }
+        volume_credits += volumeCreditsFor(playFor(plays, perf), perf);
 
         // print line for this order
         result << " " << playFor(plays, perf)["name"].get<std::string>() << ": " << "$" << std::fixed << (this_amount/100) <<
@@ -68,6 +66,21 @@ std::string statement(
     result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
     result << "You earned " << volume_credits << " credits";
     return result.str();
+}
+
+int volumeCreditsFor(
+    const nlohmann::json& play,
+    const nlohmann::json& perf)
+{
+    // add volume credits
+    int volume_credits = std::max(perf["audience"].get<int>() - 30, 0);
+
+    // add extra credit for every ten comedy attendees
+    if ("comedy" == play["type"])
+    {
+        volume_credits += perf["audience"].get<int>() / 5;
+    }
+    return volume_credits;
 }
 
 nlohmann::json playFor(

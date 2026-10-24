@@ -59,3 +59,12 @@ $ ctest --test-dir build/debug
 - The code to look up the play is now executed thrice, but this is unlikely to
   significantly affect performance. Even if it were, it is much easier to
   improve performance of a well-factored code base.
+
+## 6: Extract function volumeCreditsFor
+- Extract Function (106)
+- Extract the volume credits calculation of a performance.
+- The variables ```perf``` and ```play``` are used but not modified, so they
+  can be passed as parameters.
+- ```volume_credits``` is a bit more tricky as it is an accumulator updated
+  in each pass. The best bet is to initialize a shadow of it inside the
+  extracted function and return it.
