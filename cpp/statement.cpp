@@ -37,7 +37,6 @@ std::string statement(
     const nlohmann::json& plays)
 {
     float total_amount = 0;
-    int volume_credits = 0;
 
     // this creates a new locale based on the current application default
     // (which is either the one given on startup, but can be overriden with
@@ -58,6 +57,7 @@ std::string statement(
             " (" << perf["audience"] << " seats)\n";
         total_amount += this_amount;
     }
+    int volume_credits = 0;
     for( const nlohmann::json& perf : invoice["performances"])
     {
         volume_credits += volumeCreditsFor(playFor(plays, perf), perf);

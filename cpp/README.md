@@ -79,3 +79,6 @@ $ ctest --test-dir build/debug
 
 ## 9: Separate the accumulation of volumeCredits in function statement
 - Split Loop (227)
+
+## 10: Move the declaration of volume_credits next to the loop
+- Slide Statements (223)
