@@ -76,3 +76,6 @@ $ ctest --test-dir build/debug
 
 ## 8: Rename parameter perf, of function volumeCreditsFor, to performance
 - Rename Variable (137)
+
+## 9: Separate the accumulation of volumeCredits in function statement
+- Split Loop (227)
