@@ -6,7 +6,7 @@
 
 int volumeCreditsFor(
     const nlohmann::json& play,
-    const nlohmann::json& perf);
+    const nlohmann::json& performance);
 
 nlohmann::json playFor(
     const nlohmann::json& plays,
@@ -70,15 +70,15 @@ std::string statement(
 
 int volumeCreditsFor(
     const nlohmann::json& play,
-    const nlohmann::json& perf)
+    const nlohmann::json& performance)
 {
     // add volume credits
-    int result = std::max(perf["audience"].get<int>() - 30, 0);
+    int result = std::max(performance["audience"].get<int>() - 30, 0);
 
     // add extra credit for every ten comedy attendees
     if ("comedy" == play["type"])
     {
-        result += perf["audience"].get<int>() / 5;
+        result += performance["audience"].get<int>() / 5;
     }
     return result;
 }
