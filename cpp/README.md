@@ -128,3 +128,8 @@ $ ctest --test-dir build/debug
 - Extract Function (106)
 - Start a Split Phase (154) by applying Extract Function (106) to the code
   that makes up the second phase.
+
+## 21: Add the itermediate data structure statementData
+- Create an object that will act as an intermediate data structure between
+  the two phases.
+- Pass this object in as argument to ```renderPlainText```.

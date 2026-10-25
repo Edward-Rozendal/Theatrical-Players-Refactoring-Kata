@@ -4,7 +4,12 @@
 #include <sstream>
 #include <iomanip>
 
+struct StatementData
+{
+};
+
 std::string renderPlainText(
+    const StatementData& data,
     const nlohmann::json& invoice,
     const nlohmann::json& plays);
 
@@ -48,10 +53,12 @@ std::string statement(
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {
-    return renderPlainText(invoice, plays);
+    StatementData data;
+    return renderPlainText(data, invoice, plays);
 }
 
 std::string renderPlainText(
+    const StatementData& data,
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {
