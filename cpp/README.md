@@ -107,3 +107,6 @@ $ ctest --test-dir build/debug
 ## 17: Extract function to calculate total amount
 - Extract Function (106)
 - Extract the total amount calculation.
+
+## 18: Replace temporary variable total_amount by a call to function to calculate total amount
+- Inline Variable (123)

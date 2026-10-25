@@ -61,9 +61,7 @@ std::string statement(
         result << " " << playFor(plays, perf)["name"].get<std::string>() << ": " << "$" << std::fixed << (amountFor(playFor(plays, perf), perf)/100) <<
             " (" << perf["audience"] << " seats)\n";
     }
-    float total_amount = totalAmount(invoice, plays);
-
-    result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
+    result << "Amount owed is " << "$" << std::fixed << (totalAmount(invoice, plays)/100.0f) << "\n";
     result << "You earned " << totalVolumeCredits(invoice, plays) << " credits";
     return result.str();
 }
