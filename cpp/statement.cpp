@@ -3,10 +3,17 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <vector>
+
+struct Performance {
+    std::string playID;
+    int audience;
+};
 
 struct StatementData
 {
     std::string customer;
+    std::vector<Performance> performances;
 };
 
 std::string renderPlainText(
@@ -56,6 +63,10 @@ std::string statement(
 {
     StatementData data;
     data.customer = invoice["customer"].get<std::string>();
+    for (const auto& perf : invoice["performances"])
+    {
+        data.performances.push_back({perf["playID"].get<std::string>(), perf["audience"].get<int>()});
+    }
     return renderPlainText(data, invoice, plays);
 }
 
