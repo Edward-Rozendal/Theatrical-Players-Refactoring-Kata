@@ -103,3 +103,7 @@ $ ctest --test-dir build/debug
 
 ## 16: Move the declaration of total_amount next to the loop
 - Slide Statements (223)
+
+## 17: Extract function to calculate total amount
+- Extract Function (106)
+- Extract the total amount calculation.
