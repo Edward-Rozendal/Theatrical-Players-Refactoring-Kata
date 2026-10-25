@@ -40,8 +40,6 @@ std::string statement(
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {
-    float total_amount = 0;
-
     // this creates a new locale based on the current application default
     // (which is either the one given on startup, but can be overriden with
     // std::locale::global) - then extends it with an extra facet that
@@ -59,6 +57,7 @@ std::string statement(
         result << " " << playFor(plays, perf)["name"].get<std::string>() << ": " << "$" << std::fixed << (amountFor(playFor(plays, perf), perf)/100) <<
             " (" << perf["audience"] << " seats)\n";
     }
+    float total_amount = 0;
     for( const nlohmann::json& perf : invoice["performances"])
     {
         total_amount += amountFor(playFor(plays, perf), perf);

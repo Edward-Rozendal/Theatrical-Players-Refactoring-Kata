@@ -100,3 +100,6 @@ $ ctest --test-dir build/debug
 
 ## 15: Separate the accumulation of total_amount in function statement
 - Split Loop (227)
+
+## 16: Move the declaration of total_amount next to the loop
+- Slide Statements (223)
