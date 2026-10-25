@@ -61,10 +61,9 @@ std::string statement(
             " (" << perf["audience"] << " seats)\n";
         total_amount += this_amount;
     }
-    int volume_credits = totalVolumeCredits(invoice, plays);
 
     result << "Amount owed is " << "$" << std::fixed << (total_amount/100.0f) << "\n";
-    result << "You earned " << volume_credits << " credits";
+    result << "You earned " << totalVolumeCredits(invoice, plays) << " credits";
     return result.str();
 }
 

@@ -91,3 +91,6 @@ $ ctest --test-dir build/debug
 - Rename Variable (137)
 - This is a personal convention to make it clearer. It makes its role, the
   return value from a function, always known.
+
+## 13: Replace temporary variable volume_credits by a call to function totalVolumeCredits
+- Inline Variable (123)
