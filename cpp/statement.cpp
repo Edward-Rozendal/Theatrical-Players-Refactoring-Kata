@@ -6,6 +6,7 @@
 
 struct StatementData
 {
+    std::string customer;
 };
 
 std::string renderPlainText(
@@ -54,6 +55,7 @@ std::string statement(
     const nlohmann::json& plays)
 {
     StatementData data;
+    data.customer = invoice["customer"].get<std::string>();
     return renderPlainText(data, invoice, plays);
 }
 
@@ -71,7 +73,7 @@ std::string renderPlainText(
     std::stringstream result;
     result.imbue(comma_locale);
     result.precision(2);
-    result << "Statement for " << invoice["customer"].get<std::string>() << '\n';
+    result << "Statement for " << data.customer << '\n';
 
     for( const nlohmann::json& perf : invoice["performances"])
     {
