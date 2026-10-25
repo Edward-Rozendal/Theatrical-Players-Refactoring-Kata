@@ -58,6 +58,9 @@ std::string statement(
         // print line for this order
         result << " " << playFor(plays, perf)["name"].get<std::string>() << ": " << "$" << std::fixed << (amountFor(playFor(plays, perf), perf)/100) <<
             " (" << perf["audience"] << " seats)\n";
+    }
+    for( const nlohmann::json& perf : invoice["performances"])
+    {
         total_amount += amountFor(playFor(plays, perf), perf);
     }
 

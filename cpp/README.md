@@ -97,3 +97,6 @@ $ ctest --test-dir build/debug
 
 ## 14: Replace temporary variable this_amount by a call to function amountFor
 - Inline Variable (123)
+
+## 15: Separate the accumulation of total_amount in function statement
+- Split Loop (227)
