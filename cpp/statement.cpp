@@ -4,6 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
+std::string renderPlainText(
+    const nlohmann::json& invoice,
+    const nlohmann::json& plays);
+
 float totalAmount(
     const nlohmann::json& invoice,
     const nlohmann::json& plays);
@@ -41,6 +45,13 @@ class comma_numpunct : public std::numpunct<char>
 };
 
 std::string statement(
+    const nlohmann::json& invoice,
+    const nlohmann::json& plays)
+{
+    return renderPlainText(invoice, plays);
+}
+
+std::string renderPlainText(
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {

@@ -115,3 +115,16 @@ $ ctest --test-dir build/debug
 - Rename Variable (137)
 - This is a personal convention to make it clearer. It makes its role, the
   return value from a function, always known.
+
+# Stage 2 - Adding an HTML version of the statement
+- The focus moves more to the functionality change: providing an HTML version
+  of the statement.
+- We want the same calculation functions to be used by the text and HTML
+  versions of the statement.
+- One way to do this is with Split Pahse (154) to split the phases of
+  calculation and formatting.
+
+## 20: Extract function renderPlainText
+- Extract Function (106)
+- Start a Split Phase (154) by applying Extract Function (106) to the code
+  that makes up the second phase.
