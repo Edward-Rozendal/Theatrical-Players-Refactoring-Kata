@@ -145,3 +145,5 @@ $ ctest --test-dir build/debug
 ## 23: Add performances to statementData
 - Adding performances to the intermediate object allows deleting the
   ```invoices``` parameter to ```renderPlainText```.
+
+## 24: Add plays to statementData

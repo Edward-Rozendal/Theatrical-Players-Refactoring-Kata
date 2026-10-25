@@ -4,8 +4,16 @@
 #include <sstream>
 #include <iomanip>
 #include <vector>
+#include <unordered_map>
 
-struct Performance {
+struct Play
+{
+    std::string name;
+    std::string type;
+};
+
+struct Performance
+{
     std::string playID;
     int audience;
 };
@@ -14,6 +22,7 @@ struct StatementData
 {
     std::string customer;
     std::vector<Performance> performances;
+    std::unordered_map<std::string, Play> plays;
 };
 
 std::string renderPlainText(
@@ -66,6 +75,17 @@ std::string statement(
     for (const auto& perf : invoice["performances"])
     {
         data.performances.push_back({perf["playID"].get<std::string>(), perf["audience"].get<int>()});
+    }
+    for (auto it = plays.begin(); it != plays.end(); ++it)
+    {
+        const std::string playID = it.key();
+        const auto& playJson = it.value();
+
+        Play play;
+        play.name = playJson["name"].get<std::string>();
+        play.type = playJson["type"].get<std::string>();
+
+        data.plays.emplace(playID, play);
     }
     return renderPlainText(data, invoice, plays);
 }
