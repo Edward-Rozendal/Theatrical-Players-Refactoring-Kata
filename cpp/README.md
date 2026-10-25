@@ -86,3 +86,8 @@ $ ctest --test-dir build/debug
 ## 11: Extract function totalVolumeCredits
 - Extract Function (106)
 - Extract the total volume credits calculation.
+
+## 12: Rename variable volume_credits, in function totalVolumeCredits, to result
+- Rename Variable (137)
+- This is a personal convention to make it clearer. It makes its role, the
+  return value from a function, always known.

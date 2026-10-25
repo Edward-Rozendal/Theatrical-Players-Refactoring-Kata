@@ -72,12 +72,12 @@ int totalVolumeCredits(
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {
-    int volume_credits = 0;
+    int result = 0;
     for( const nlohmann::json& perf : invoice["performances"])
     {
-        volume_credits += volumeCreditsFor(playFor(plays, perf), perf);
+        result += volumeCreditsFor(playFor(plays, perf), perf);
     }
-    return volume_credits;
+    return result;
 }
 
 int volumeCreditsFor(
