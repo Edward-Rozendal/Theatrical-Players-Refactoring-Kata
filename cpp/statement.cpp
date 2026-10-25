@@ -70,12 +70,12 @@ float totalAmount(
     const nlohmann::json& invoice,
     const nlohmann::json& plays)
 {
-    float total_amount = 0;
+    float result = 0;
     for( const nlohmann::json& perf : invoice["performances"])
     {
-        total_amount += amountFor(playFor(plays, perf), perf);
+        result += amountFor(playFor(plays, perf), perf);
     }
-    return total_amount;
+    return result;
 }
 
 int totalVolumeCredits(

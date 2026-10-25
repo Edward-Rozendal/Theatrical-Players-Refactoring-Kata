@@ -110,3 +110,8 @@ $ ctest --test-dir build/debug
 
 ## 18: Replace temporary variable total_amount by a call to function to calculate total amount
 - Inline Variable (123)
+
+## 19: Rename variable total_amount, in function totalAmount, to result
+- Rename Variable (137)
+- This is a personal convention to make it clearer. It makes its role, the
+  return value from a function, always known.
