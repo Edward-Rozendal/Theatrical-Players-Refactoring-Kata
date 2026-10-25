@@ -94,3 +94,6 @@ $ ctest --test-dir build/debug
 
 ## 13: Replace temporary variable volume_credits by a call to function totalVolumeCredits
 - Inline Variable (123)
+
+## 14: Replace temporary variable this_amount by a call to function amountFor
+- Inline Variable (123)
